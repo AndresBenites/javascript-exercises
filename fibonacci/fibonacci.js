@@ -1,4 +1,7 @@
 const fibonacci = function(num) {
+    if (isNaN(parseInt(num))) return "OOPS";
+    num = parseInt(num);
+    if (num < 0) return "OOPS";
     numArray = [0, 1, 1]
     if (num <= 2) return numArray[num];
     for(i = 2; i < num; i++){
@@ -7,6 +10,5 @@ const fibonacci = function(num) {
     return numArray[num];
 }
 
-console.log(fibonacci(3));
 
 module.exports = fibonacci
